@@ -1,0 +1,25 @@
+.alert {
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #FFD203;
+}
+
+.alert__big-screen {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+@media screen and (min-width: 550px) {
+    .alert {
+        display: flex;
+    }
+}

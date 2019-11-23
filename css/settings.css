@@ -1,0 +1,40 @@
+.settings__setting-list {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 0 25px;
+}
+
+.settings__setting {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.settings__setting > :last-child {
+    position: absolute;
+    right: 0px;
+}
+
+.setting__column {
+    padding-right: 20px;
+}
+
+.setting__icon {
+    min-width: 40px;
+}
+
+.setting__name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.setting_sub-comment {
+    font-size: 20px;
+    color: gray;
+}
+
+.setting-space {
+    padding-top: 15px;
+}

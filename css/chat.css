@@ -1,0 +1,230 @@
+.chat__input {
+    position: fixed;
+    bottom: 40px;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input__utils {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+ }
+
+.chat__input i{
+    font-size: 22px;
+}
+
+.input__textfield {
+    width: 70%;
+    background-color: #fcfcfc;
+    padding: 10px 10%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    transition: all 0.5s ease-in;
+    border-radius: 40px;
+    text-align: center;
+    overflow:hidden; 
+    text-overflow:ellipsis; 
+    white-space:nowrap;
+    box-shadow: 0 30px 60px 0px #e7eeef,
+    0 18px 36px -18px #e7eeef, 0 -12px 36px -8px #e7eeef;
+    animation: float 5s linear infinite forwards;
+}
+
+.input__textfield:focus {
+    width: 100%;
+    padding: 10px 2%;
+    margin: 0 auto;
+    border-radius: 0px;
+    transform: translateY(35px);
+    text-align: left;
+}
+
+.input__textfield:focus::placeholder{
+    opacity: 0;
+}
+
+.input__textfield:focus ~.input__util {
+    opacity: 0;
+}
+
+.input__util {
+    transition: opacity .3s ease-in-out;
+    cursor: pointer;
+}
+
+.input__attach-image {
+    position: absolute;
+    left: 9%;
+}
+
+.input__attach-icon {
+    position: absolute;
+    right: 11%;
+}
+
+.input__mic {
+    position: absolute;
+    right: 8%;
+}
+
+.chat__date {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 25px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #fcfcfc;
+    box-shadow: 0 2px 10px #e7eeef;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 40px;
+}
+
+.chat__message {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.chat__message .message__column {
+    padding-left: 10px;
+}
+
+.chat__message .message__text {
+    display: inline-block;
+    width: auto;
+    padding: 10px 20px;
+    background-color: #fcfcfc;
+    box-shadow: 0 2px 10px #e7eeef;
+    border-radius: 40px;
+    font-weight: 600;
+}
+
+.message__name {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.message__time {
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+.message__guest {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+    width: 50%;
+    animation: toRightAnim 0.5s ease-out;
+}
+
+.message__guest img {
+    width: 35px;
+    border-radius: 30%;
+}
+
+.message__guest >:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-left: 5px !important;
+}
+
+.message__guest .message__text {
+    border-top-left-radius: 0px;
+    background-image: linear-gradient(to right, #12c2e9, #c471ed,#f64f59);
+    color: #ffffff;
+}
+
+.message__me {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    animation: toLeftAnim 0.5s ease-out;
+}
+
+.message__me >:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: -5px !important;
+}
+
+.message__me .message__text {
+    border-bottom-right-radius: 0px;
+    background-image: linear-gradient(to left, #fc4a1a, #f7b733);
+    color: #ffffff;
+}
+
+.message__icon {
+    animation: spin 1s linear 2;
+}
+
+@keyframes float {
+    0% {
+      box-shadow: 0 10px 150px -20px #F7AC31;
+    }
+    50% {
+      box-shadow: 0 10px 150px -100px #F7AC31;
+    }
+    100% {
+      box-shadow: 0 10px 150px 0px #F7AC31;
+    }
+} 
+
+@keyframes toRightAnim {
+    from {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+} 
+
+@keyframes toLeftAnim {
+    from {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+} 
+
+@keyframes spin {
+    from {
+        transform: none;
+    }
+
+    to {
+        transform: rotateY(1turn);
+    }
+}

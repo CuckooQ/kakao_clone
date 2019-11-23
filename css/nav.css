@@ -1,0 +1,52 @@
+.nav {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 15px;
+    font-size: 30px;
+    transform: translateY(80px);
+    animation: showNav 0.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+.nav__column {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav__column a {
+    position: relative;
+}
+
+.nav__friends-count {
+    position: absolute;
+    font-size: 10px;
+    font-weight: bold;
+    transform: scale(0.83);
+    left: 15px;
+    top: -5px;
+    width: 23px;
+    height: 23px;
+    color: #ffffff;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+@keyframes showNav {
+    from {
+        transform: translateY(80px);
+    }
+    
+    to {
+        transform: none;
+    }
+}
+
